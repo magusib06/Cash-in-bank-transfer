@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment System</title>
+
+<style>
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#a1c4fd,#c2e9fb);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+background:rgba(255,255,255,0.35);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:20px;
+width:320px;
+text-align:center;
+}
+
+input,select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:10px;
+border:none;
+}
+
+button{
+width:100%;
+padding:10px;
+border:none;
+border-radius:10px;
+background:#4facfe;
+color:white;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Payment</h2>
+
+<form action="https://api.web3forms.com/submit" method="POST">
+
+<input type="hidden" name="access_key" value="dff54b44-2b0d-4fd3-aac8-d69399652672">
+
+<input type="hidden" name="subject" value="New Cash In Transaction">
+
+<select name="payment_type" required>
+<option value="">Select Payment</option>
+<option value="Cash In">Cash In</option>
+<option value="Bank Transfer">Bank Transfer</option>
+</select>
+
+<input type="text" name="name" placeholder="Enter your name" required>
+
+<input type="text" name="number" placeholder="Enter Contact / Bank Number" required>
+
+<input type="number" name="price" placeholder="Enter Amount (₱)" required>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
+
+<!--link in sendemail.php file--> 
+<script> src="sendemail.php"></script>
